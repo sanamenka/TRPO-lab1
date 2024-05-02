@@ -5,7 +5,7 @@
 #include <QString>
 
 
-class File:public QFileInfo
+class File
 {
 private:
     bool existf;
@@ -14,7 +14,7 @@ private:
 
 public:
     File();
-    File(const QString& file_name);
+    File(const QString& file_name, bool flag = 0);
     bool is_exist();
     int get_file_size();
     QString get_file_name();
