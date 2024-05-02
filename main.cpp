@@ -9,7 +9,6 @@ QTextStream cin(stdin);
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    setlocale(LC_ALL,"Russia");
     FileManager& ourManager = FileManager::Inctance();
     Loger ourLoger;
 
@@ -19,12 +18,12 @@ int main(int argc, char *argv[])
 
     QString testfile1,testfile2;
     std::cout << "enter the file path to add:" << std::endl;
-     cin >> testfile1 >> testfile2;
-     ourManager.addfile(testfile1); // добавляем файлы для проверки
-     ourManager.addfile(testfile2);
+    cin >> testfile1>> testfile2;
+    ourManager.addfile(testfile1); // добавляем файлы для проверки
+    ourManager.addfile(testfile2);
 
-   // ourManager.addfile("C:\f1.txt");
-   // ourManager.addfile("C:\f2.txt");
+   // C:\test1.txt
+   // C:\test2.txt
 
    while(true) // цикл для запуска проверки
     {

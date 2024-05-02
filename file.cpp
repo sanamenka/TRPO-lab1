@@ -9,13 +9,14 @@ File::File(const QString& file_name, bool flag)
     namef = file_name;
     QFileInfo file (namef);
     sizef = file.size();
+
     if (flag)
         existf = file.exists();
     else
         existf = !file.exists();
 }
 
-bool File::operator ==(File f)const
+bool File::operator ==(File f)const // перегрузка оператора == для метода addfile
 {
     if (f.namef != namef)
         return false;
@@ -23,7 +24,6 @@ bool File::operator ==(File f)const
         return true;
 }
 
-//в файл инфо чек
 bool File::is_exist()
 {
         return existf;

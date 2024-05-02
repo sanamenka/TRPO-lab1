@@ -1,16 +1,14 @@
 #ifndef FILE_H
 #define FILE_H
 #include <QFileInfo>
-#include <QObject>
 #include <QString>
-
 
 class File
 {
 private:
-    bool existf;
-    qint64 sizef;
-    QString namef;
+    bool existf; // статус существования
+    qint64 sizef; //размер
+    QString namef; //путь
 
 public:
     File();
@@ -19,7 +17,7 @@ public:
     int get_file_size();
     QString get_file_name();
 
-    bool operator==(File f) const;
+    bool operator==(File f) const; //перегрузка == для метода addfile
 };
 
 #endif // FILE_H
