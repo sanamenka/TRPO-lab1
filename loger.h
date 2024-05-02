@@ -2,15 +2,18 @@
 #define LOGER_H
 
 #include <QObject>
-
+#include <QString>
+#include <iostream>
 class Loger : public QObject
 {
     Q_OBJECT
 public:
-    explicit Loger(QObject *parent = nullptr);
+    Loger();
 
-signals:
-
+public slots:
+    void print_exist(QString namef, qint64 sizef);
+    void print_deleted(QString namef);
+    void print_changed(QString namef, qint64 sizef);
 };
 
 #endif // LOGER_H
